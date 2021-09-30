@@ -5,7 +5,8 @@ function WeatherCard( {
   currentTemp, 
   highTemp, 
   humidity, 
-  lowTemp, 
+  lowTemp,
+  weatherDescription, 
   weatherType = 'Unknown', 
   windSpeed
 }) {
@@ -20,9 +21,6 @@ function WeatherCard( {
       cloudiness: <strong>{cloudiness}</strong>
     </p>
     <p>
-      WeatherType: <strong>{weatherType}</strong>
-    </p>
-    <p>
       highTemp: <strong>{highTemp}</strong>
     </p>
     <p>
@@ -30,6 +28,12 @@ function WeatherCard( {
     </p>
     <p>
       lowTemp: <strong>{lowTemp}</strong>
+    </p>
+    <p>
+      weatherType: <strong>{weatherType}</strong>
+    </p>
+    <p>
+      weatherDescription: <strong>{weatherDescription}</strong>
     </p>
     <p>
       windSpeed: <strong>{windSpeed}</strong>

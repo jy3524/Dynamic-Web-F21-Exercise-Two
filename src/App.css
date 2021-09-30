@@ -10,10 +10,53 @@
 }
 
 .WeatherAppHeader {
+  color: #8900e1;
   display: flex;
-  justify-content: center;
   font-size: 200%;
+  justify-content: center;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.citycontainer {
+  display: flex;
+}
+
+.cityone a {
   color: #8900e1;
+  margin: 20px;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.citytwo a {
+  color: #8900e1;
+  margin: 20px;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.citythree a {
+  color: #8900e1;
+  margin: 20px;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.cityfour a {
+  color: #8900e1;
+  margin: 20px;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.currentTempWrapper {
+  padding: 20px;
+  text-align: center;
+}
+
+.currentTemp {
+  font-size: 30px;
+  font-size: bold;
+  margin: 0;
 }
