@@ -14,7 +14,7 @@ function useQuery() {
 
 function Home() {
   const [city, setCity] = useState();
-  const [WeatherData, setWeatherData] = useState();
+  const [weatherData, setWeatherData] = useState();
   let query = useQuery();
 
   const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
@@ -41,18 +41,18 @@ function Home() {
   }, [URL, city]);
 
   const { cloudiness, currentTemp, highTemp, humidity, lowTemp, weatherDescription, weatherType, windSpeed } = useMemo(() => {
-    if (!WeatherData) return {};
+    if (!weatherData) return {};
     return ({
-      cloudiness: WeatherData.clouds.all,
-      currentTemp: Math.round((WeatherData.main.temp-273.15)*(9/5)+32),
-      highTemp: Math.round((WeatherData.main.temp_max-273.15)*(9/5)+32),
-      humidity: WeatherData.main.humidity,
-      lowTemp: Math.round((WeatherData.main.temp_min-273.15)*(9/5)+32),
-      weatherDescription: WeatherData.weather[0].description,
-      weatherType: WeatherData.weather[0].main,
-      windSpeed: WeatherData.wind.speed,
+      cloudiness: weatherData.clouds.all,
+      currentTemp: Math.round((weatherData.main.temp-273.15)*(9/5)+32),
+      highTemp: Math.round((weatherData.main.temp_max-273.15)*(9/5)+32),
+      humidity: weatherData.main.humidity,
+      lowTemp: Math.round((weatherData.main.temp_min-273.15)*(9/5)+32),
+      weatherDescription: weatherData.weather[0].description,
+      weatherType: weatherData.weather[0].main,
+      windSpeed: weatherData.wind.speed,
     })
-  }, [WeatherData])
+  }, [weatherData]);
 
   return (
     <main className="App">
