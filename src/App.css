@@ -12,22 +12,33 @@
 .WeatherAppHeader {
   color: #8900e1;
   display: flex;
-  font-size: 200%;
+  font-size: 300%;
   justify-content: center;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 .WeatherImageWrapper {
-  align-items: center;
+  align-content: center;
   display: flex;
   justify-content: center;
   padding-top: 40px;
   font-size: 160px;
 }
 
+.currentTempWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.currentTemp {
+  font-size: 30px;
+  margin: 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .weatherWrapper {
-  align-items: center;
   display: grid;
   justify-content: center;
 }
@@ -78,16 +89,4 @@
 
 .cityfour a.Active {
   border-bottom: 2px solid black;
-}
-
-
-.currentTempWrapper {
-  padding: 20px;
-  text-align: center;
-}
-
-.currentTemp {
-  font-size: 30px;
-  margin: 0;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
