@@ -58,16 +58,16 @@ function Home() {
     <main className="App">
       <header className="citycontainer">
         <p className="cityone">
-          <a href="/?city=los angeles">Los Angeles</a>
+          <a href="/?city=los angeles" className={city === 'los angeles' && 'Active'}>Los Angeles</a>
         </p>
         <p className="citytwo">
-          <a href="/?city=london">London</a>
+          <a href="/?city=london" className={city === 'london' && 'Active'}>London</a>
         </p>
         <p className="citythree">
-          <a href="/?city=singapore">Singapore</a>
+          <a href="/?city=singapore" className={city === 'singapore' && 'Active'}>Singapore</a>
         </p>
         <p className="cityfour">
-          <a href="/?city=hongkong">Hong Kong</a>
+          <a href="/?city=hongkong" className={city === 'hongkong' && 'Active'}>Hong Kong</a>
         </p>
       </header>
       <h1 className="WeatherAppHeader">{city}</h1>
