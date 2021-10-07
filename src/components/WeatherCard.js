@@ -18,10 +18,21 @@ function WeatherCard( {
     <div className="WeatherImageWrapper">
       <WeatherImage weatherType={weatherType} />
     </div>
+    <div className="weatherType">
+      <p>
+        Weather Type: <strong>{weatherType}</strong>
+      </p>
+    </div>
     
     <div className="currentTempWrapper">
+      <p className="highTemp">
+        High Temp: <strong>{highTemp}</strong><span>&deg;F</span>
+      </p>
       <p className="currentTemp">
         <strong>{currentTemp}</strong><span>&deg;F</span>
+      </p>
+      <p className="lowTemp">
+        Low Temp: <strong>{lowTemp}</strong><span>&deg;F</span>
       </p>
     </div>
     <div className="weatherWrapper"> 
@@ -29,16 +40,7 @@ function WeatherCard( {
         Cloudiness: <strong>{cloudiness}</strong><span>%</span>
       </p>
       <p>
-        High Temp: <strong>{highTemp}</strong><span>&deg;F</span>
-      </p>
-      <p>
         Humidity: <strong>{humidity}</strong><span>%</span>
-      </p>
-      <p>
-        Low Temp: <strong>{lowTemp}</strong><span>&deg;F</span>
-      </p>
-      <p>
-        Weather Type: <strong>{weatherType}</strong>
       </p>
       <p>
         Wind Speed: <strong>{windSpeed}</strong><span> mph</span>
