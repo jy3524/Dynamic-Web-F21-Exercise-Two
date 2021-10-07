@@ -12,14 +12,16 @@ function WeatherCard( {
   windSpeed
 }) {
   return (
-  <section className="WeatherCard">
+  <section className="WeatherCard" style={{
+    backgroundColor: `rgba(150, 150, 150, ${cloudiness / 100})`,
+  }}>
     <div className="WeatherImageWrapper">
       <WeatherImage weatherType={weatherType} />
     </div>
     
     <div className="currentTempWrapper">
       <p className="currentTemp">
-        Current Temperature: <strong>{currentTemp}</strong><span>&deg;F</span>
+        <strong>{currentTemp}</strong><span>&deg;F</span>
       </p>
     </div>
     <div className="weatherWrapper"> 
@@ -39,10 +41,10 @@ function WeatherCard( {
         Weather Type: <strong>{weatherType}</strong>
       </p>
       <p>
-        Weather Description: <strong>{weatherDescription}</strong>
+        Wind Speed: <strong>{windSpeed}</strong><span> mph</span>
       </p>
       <p>
-        Wind Speed: <strong>{windSpeed}</strong>
+        Weather Description: <strong>{weatherDescription}</strong>
       </p>
     </div>
   </section>

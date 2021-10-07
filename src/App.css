@@ -7,22 +7,24 @@
 .WeatherCard {
   border: 2px solid black;
   border-radius: 8px;
+  flex-direction: column;
 }
 
 .WeatherAppHeader {
   color: #8900e1;
   display: flex;
-  font-size: 300%;
+  font-size: 400%;
   justify-content: center;
   margin-top: 30px;
   margin-bottom: 30px;
+  text-transform: capitalize;
 }
 
 .WeatherImageWrapper {
   align-content: center;
   display: flex;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 30px;
   font-size: 160px;
 }
 
@@ -33,9 +35,9 @@
 }
 
 .currentTemp {
-  font-size: 30px;
+  font-size: 60px;
   margin: 0;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .weatherWrapper {
@@ -49,28 +51,28 @@
 
 .cityone a {
   color: #8900e1;
-  margin: 20px;
+  margin: 10px;
   padding: 5px;
   text-decoration: none;
 }
 
 .citytwo a {
   color: #8900e1;
-  margin: 20px;
+  margin: 10px;
   padding: 5px;
   text-decoration: none;
 }
 
 .citythree a {
   color: #8900e1;
-  margin: 20px;
+  margin: 10px;
   padding: 5px;
   text-decoration: none;
 }
 
 .cityfour a {
   color: #8900e1;
-  margin: 20px;
+  margin: 10px;
   padding: 5px;
   text-decoration: none;
 }
@@ -89,4 +91,10 @@
 
 .cityfour a.Active {
   border-bottom: 2px solid black;
+}
+
+@media (min-width: 800px) {
+  .WeatherCard {
+    flex-direction: row;
+  }
 }
